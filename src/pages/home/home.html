@@ -1,0 +1,188 @@
+<ion-header class="app-header" [ngClass]="{'transparent' : !solidHeader}">
+  <ion-navbar>
+    <ion-buttons left>
+      <button ion-button menuToggle>
+         <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>News Feed</ion-title>
+    <ion-buttons right>
+      <button ion-button>
+         <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content #rubyContent class="fullscreen" (ionScrollEnd)="changeHeaderBackground($event)">
+
+  <ion-slides [pager]="false" (click)="toggleCLass()">
+    <ion-slide class="feed-slide">
+      <img class="slide-image" src="assets/other-500x500-1.jpg" alt="">
+      <div class="details">
+        <h1 class="secondary-font detail-title">Sweet Dreams this Halloween</h1>
+        <h5 class="primary-font">
+          <img class="detail-thumb" src="http://placehold.it/50x50/ff0000" alt="">
+          BBC News.
+          <span class="tag">
+            <ion-icon name="pricetag"></ion-icon> Food
+          </span>
+        </h5>
+      </div>
+    </ion-slide>
+
+    <ion-slide class="feed-slide">
+      <img class="slide-image" src="assets/other-500x500-2.jpg" alt="">
+      <div class="details">
+        <h1 class="secondary-font detail-title">Sweet Dreams this Halloween</h1>
+        <h5 class="primary-font">
+          BBC News
+          <span class="tag">
+            <ion-icon name="pricetag"></ion-icon> Food
+          </span>
+        </h5>
+      </div>
+    </ion-slide>
+
+    <ion-slide class="feed-slide">
+      <img class="slide-image" src="assets/other-500x500-3.jpg" alt="">
+      <div class="details">
+        <h1 class="secondary-font detail-title">Sweet Dreams this Halloween</h1>
+        <h5 class="primary-font">
+          BBC News
+          <span class="tag">
+            <ion-icon name="pricetag"></ion-icon> Food
+          </span>
+        </h5>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-segment [(ngModel)]="homeScreenOptions" class="ion-segment">
+    <ion-segment-button value="newest">
+      Newest
+    </ion-segment-button>
+    <ion-segment-button value="popular">
+      Popular
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="homeScreenOptions">
+
+    <div *ngSwitchCase="'newest'">
+      <ion-list no-lines>
+        <ion-item>
+          <ion-thumbnail item-left>
+            <img src="assets/other-500x500-1.jpg">
+          </ion-thumbnail>
+          <h3 class="bold">Child Refugees forced to work for nothing</h3>
+          <h5>NBC Nightly</h5>
+        </ion-item>
+        <ion-item>
+          <ion-thumbnail item-left>
+            <img src="assets/other-500x500-2.jpg">
+          </ion-thumbnail>
+          <h3 class="bold">Child Refugees forced to work for nothing</h3>
+          <h5>NBC Nightly</h5>
+        </ion-item>
+        <ion-item>
+          <ion-thumbnail item-left>
+            <img src="assets/other-500x500-3.jpg">
+          </ion-thumbnail>
+          <h3 class="bold">Child Refugees forced to work for nothing</h3>
+          <h5>NBC Nightly</h5>
+        </ion-item>
+      </ion-list>
+    </div>
+
+    <div *ngSwitchCase="'popular'">
+      <ion-list class="home-popular">
+        <ion-item>
+          <h2 class="bold">Dam Federation Project threatens to submerge thousands of people history</h2>
+          <h5 class="small-vertical-margin"><img class="detail-thumb" src="http://placehold.it/50x50/ff0000" alt="">
+            News Stand
+            <span class="tag">
+              <ion-icon name="pricetag"></ion-icon> Politics
+            </span>
+          </h5>
+        </ion-item>
+
+        <ion-item>
+          <h2 class="bold">Dam Federation Project threatens to submerge thousands of people history</h2>
+          <h5 class="small-vertical-margin"><img class="detail-thumb" src="http://placehold.it/50x50/ff0000" alt="">
+            News Stand
+            <span class="tag">
+              <ion-icon name="pricetag"></ion-icon> Politics
+            </span>
+          </h5>
+        </ion-item>
+
+        <ion-item>
+          <h2 class="bold">Dam Federation Project threatens to submerge thousands of people history</h2>
+          <h5 class="small-vertical-margin"><img class="detail-thumb" src="http://placehold.it/50x50/ff0000" alt="">
+            News Stand
+            <span class="tag">
+              <ion-icon name="pricetag"></ion-icon> Politics
+            </span>
+          </h5>
+        </ion-item>
+      </ion-list>
+    </div>
+
+  </div>
+
+  <h2 class="secondary-font">Others</h2>
+
+  <ion-slides class="carousel-feed" #slider id="slider" [pager] ="false" [initialSlide]="3" padding>
+    <ion-slide class="feed-slide">
+      <img class="rnd-sqr-img slide-image" src="assets/other-500x500-1.jpg" alt="">
+      <div class="details">
+        <h6 class="detail-title">Sweet Dreams this Halloween</h6>
+      </div>
+    </ion-slide>
+    <ion-slide class="feed-slide">
+      <img class="rnd-sqr-img slide-image" src="assets/other-500x500-2.jpg" alt="">
+      <div class="details">
+        <h6 class="detail-title">Sweet Dreams this Halloween</h6>
+      </div>
+    </ion-slide>
+    <ion-slide class="feed-slide">
+      <img class="rnd-sqr-img slide-image" src="assets/other-500x500-3.jpg" alt="">
+      <div class="details">
+        <h6 class="detail-title">Sweet Dreams this Halloween</h6>
+      </div>
+    </ion-slide>
+    <ion-slide class="feed-slide">
+      <img class="rnd-sqr-img slide-image" src="assets/other-500x500-4.jpg" alt="">
+      <div class="details">
+        <h6 class="detail-title">Sweet Dreams this Halloween</h6>
+      </div>
+    </ion-slide>
+    <ion-slide class="feed-slide">
+      <img class="rnd-sqr-img slide-image" src="assets/other-500x500-6.jpg" alt="">
+      <div class="details">
+        <h6 class="detail-title">Sweet Dreams this Halloween</h6>
+      </div>
+    </ion-slide>
+    <ion-slide class="feed-slide">
+      <img class="rnd-sqr-img slide-image" src="assets/other-500x500-1.jpg" alt="">
+      <div class="details">
+        <h6 class="detail-title">Sweet Dreams this Halloween</h6>
+      </div>
+    </ion-slide>
+    <ion-slide class="feed-slide">
+      <img class="rnd-sqr-img slide-image" src="assets/other-500x500-2.jpg" alt="">
+      <div class="details">
+        <h6 class="detail-title">Sweet Dreams this Halloween</h6>
+      </div>
+    </ion-slide>
+    <ion-slide class="feed-slide">
+      <img class="rnd-sqr-img slide-image" src="assets/other-500x500-3.jpg" alt="">
+      <div class="details">
+        <h6 class="detail-title">Sweet Dreams this Halloween</h6>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+
+</ion-content>

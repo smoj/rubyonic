@@ -1,0 +1,166 @@
+<!--
+  Generated template for the Profile page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="app-header transparent">
+  <ion-navbar>
+    <ion-buttons left>
+      <button ion-button menuToggle>
+         <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Profile</ion-title>
+    <ion-buttons right>
+      <button ion-button>
+         <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="fullscreen">
+  <div class="profile-banner">
+    <img class="slide-image" src="assets/other-500x500-3.jpg" alt="">
+    <div class="details" text-center>
+      <img src="assets/user-200x200-1.jpg" alt="" class="profile-image">
+      <h4 class="secondary-font detail-title" no-margin>Sweet Dreams this Halloween</h4>
+      <h6 class="primary-font location"><ion-icon name="pin"></ion-icon> Singapore</h6>
+    </div>
+  </div>
+
+  <ion-grid class="profile-options">
+    <ion-row>
+      <ion-col col-3>
+        <button ion-button block color="danger" round>
+          <ion-icon name="heart"></ion-icon>
+        </button>
+        <h2>472</h2>
+        <h6>followers</h6>
+      </ion-col>
+
+      <ion-col col-6>
+        <button ion-button block color="primary" class="secondary-font" round>
+          Friend
+        </button>
+        <h2>119</h2>
+        <h6>followers</h6>
+      </ion-col>
+
+      <ion-col col-3>
+        <button ion-button block color="emerald" round>
+          <ion-icon name="chatboxes"></ion-icon>
+        </button>
+        <h2>860</h2>
+        <h6>followers</h6>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-slides class="carousel-feed" #slider id="slider" [pager] ="false" [initialSlide]="3" padding>
+    <ion-slide class="feed-slide">
+      <img class="rnd-sqr-img slide-image" src="assets/other-500x500-1.jpg" alt="">
+    </ion-slide>
+    <ion-slide class="feed-slide">
+      <img class="rnd-sqr-img slide-image" src="assets/other-500x500-2.jpg" alt="">
+    </ion-slide>
+    <ion-slide class="feed-slide">
+      <img class="rnd-sqr-img slide-image" src="assets/other-500x500-3.jpg" alt="">
+    </ion-slide>
+    <ion-slide class="feed-slide">
+      <img class="rnd-sqr-img slide-image" src="assets/other-500x500-4.jpg" alt="">
+    </ion-slide>
+    <ion-slide class="feed-slide">
+      <img class="rnd-sqr-img slide-image" src="assets/other-500x500-6.jpg" alt="">
+    </ion-slide>
+    <ion-slide class="feed-slide">
+      <img class="rnd-sqr-img slide-image" src="assets/other-500x500-1.jpg" alt="">
+    </ion-slide>
+    <ion-slide class="feed-slide">
+      <img class="rnd-sqr-img slide-image" src="assets/other-500x500-2.jpg" alt="">
+    </ion-slide>
+    <ion-slide class="feed-slide">
+      <img class="rnd-sqr-img slide-image" src="assets/other-500x500-3.jpg" alt="">
+    </ion-slide>
+  </ion-slides>
+
+  <ion-list no-lines class="profile-list">
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/user-200x200-1.jpg">
+      </ion-avatar>
+      <h2 class="secondary-font">Evan Sweanteson</h2>
+      <p>04 Sept at 3:40</p>
+      <button ion-button item-right outline round class="secondary-font">Follow</button>
+    </ion-item>
+    <ion-item>
+      <p class="padding-vertical">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <img src="assets/other-300x200-1.jpg" class="rnd-sqr-img profile-media">
+      <ion-grid class="profile-stats">
+        <ion-row>
+          <ion-col col-6 text-left>
+            <button ion-button clear color="primary">
+              <ion-icon name="share"></ion-icon>
+              <span class="stat-count">4</span>
+            </button>
+          </ion-col>
+
+          <ion-col col-6 text-right>
+            <button ion-button clear color="primary">
+              <ion-icon name="chatboxes"></ion-icon>
+              <span class="stat-count">17</span>
+            </button>
+            <button ion-button clear color="primary">
+              <ion-icon name="heart"></ion-icon>
+              <span class="stat-count">12</span>
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/user-200x200-1.jpg">
+      </ion-avatar>
+      <h2 class="secondary-font">Evan Sweanteson</h2>
+      <p>04 Sept at 3:40</p>
+      <button ion-button item-right outline round class="secondary-font">Follow</button>
+    </ion-item>
+    <ion-item>
+      <p class="padding-vertical">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <ion-grid class="profile-stats">
+        <ion-row>
+          <ion-col col-6 text-left>
+            <button ion-button clear color="primary">
+              <ion-icon name="share"></ion-icon>
+              <span class="stat-count">4</span>
+            </button>
+          </ion-col>
+
+          <ion-col col-6 text-right>
+            <button ion-button clear color="primary">
+              <ion-icon name="chatboxes"></ion-icon>
+              <span class="stat-count">17</span>
+            </button>
+            <button ion-button clear color="primary">
+              <ion-icon name="heart"></ion-icon>
+              <span class="stat-count">12</span>
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,101 @@
+sidemenu {
+  .half-bg {
+    background: color($colors, dark);
+    *, .app-profile-stats {
+      color : color($colors, light);
+    }
+  }
+  .app-profile-details {
+    padding: 20px 16px;
+    border-bottom: 1px solid transparentize(color($colors, light), 0.8);
+    .pic {
+      position: relative;
+      width: auto;
+      display: inline-block;
+      img {
+        border-radius: 500px;
+        max-width: 60px;
+        max-height: 60px;
+      }
+      ion-badge {
+        position: absolute;
+        text-indent: -9999px;
+        right: 0;
+        bottom: 0px;
+        width: 10px;
+        height: 22px;
+        border: 3px solid #fff;
+      }
+
+    }
+    h1,h2,h3,h4,h5,h6 {
+      margin-bottom : 0.6rem;
+      margin-top : 0.6rem;
+      &.handle {
+        color : color($colors, primary);
+      }
+    }
+  }
+
+  .app-search {
+    margin-top: 10px;
+    position: relative;
+    * {
+      color: #b9bec4;
+    }
+    ion-icon {
+      position: absolute;
+      z-index: 11;
+      top: 25px;
+      left: 28px;
+      font-size: 2.3rem;
+    }
+    ion-input.input {
+      &.input-ios, &.input-md {
+        background: transparentize(color($colors, dark), 0.95);
+        text-indent: 40px;
+        border: 1px solid transparentize(color($colors, dark), 0.8);
+        border-radius: 20px;
+    }
+    }
+  }
+
+  .app-profile-stats {
+    color : color($colors, dark);
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    margin-top: 0.6rem;
+    margin-bottom: 0;
+  }
+
+  // margin: 10px 0;
+  display: block;
+
+  ion-list {
+    padding: 8px 16px;
+    ion-item {
+      &.item-ios, &.item-md {
+        padding-left: 6px;
+        color: color($colors, dark);
+      }
+      ion-icon {
+        color : color($colors, dark);
+      }
+    }
+
+    &.list-ios, &.list-md {
+      .item-block {
+        &:last-child, &:first-child, .item-inner {
+          border-bottom: none;
+          border-top: none;
+        }
+      }
+    }
+
+    ion-badge {
+      padding: 7px 8px 5px 8px;
+      border-radius: 5000px;
+    }
+
+  }
+}

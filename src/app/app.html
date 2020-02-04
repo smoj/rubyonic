@@ -1,0 +1,82 @@
+<ion-menu [content]="content">
+  <!-- <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+
+  <ion-content>
+    <!-- <ion-list>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+      </button>
+    </ion-list> -->
+    <sidemenu>
+
+      <div class="app-profile-details half-bg" text-center>
+        <div class="pic">
+          <img src="assets/user-200x200-1.jpg" alt="">
+          <ion-badge>.</ion-badge>
+        </div>
+        <h3 class="bold">Estella Murphy</h3>
+        <h6 class="handle">@estellamurphy</h6>
+      </div>
+
+      <ion-grid class="half-bg" padding>
+        <ion-row>
+          <ion-col col-4>
+            <h3 no-margin text-center>6,3k</h3>
+            <h6 text-center class="app-profile-stats">followers</h6>
+          </ion-col>
+          <ion-col col-4>
+            <h3 no-margin text-center>572</h3>
+            <h6 text-center class="app-profile-stats">posts</h6>
+          </ion-col>
+          <ion-col col-4>
+            <h3 no-margin text-center>2,3k</h3>
+            <h6 text-center class="app-profile-stats">following</h6>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <div class="app-search" padding>
+        <ion-icon name="search"></ion-icon>
+        <ion-input type="text"></ion-input>
+      </div>
+
+      <ion-list>
+        <ion-item menuClose *ngFor = "let page of pages" (click)="openPage(page)">
+          {{page.title}}
+        </ion-item>
+        <ion-item>
+          <ion-icon name="leaf" item-left></ion-icon>
+          Activity
+          <ion-badge item-right color="danger">3</ion-badge>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="person" item-left></ion-icon>
+          Friends
+        </ion-item>
+        <ion-item>
+          <ion-icon name="chatboxes" item-left></ion-icon>
+          Messages
+          <ion-badge item-right color="danger">1</ion-badge>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="albums" item-left></ion-icon>
+          Albums
+        </ion-item>
+        <ion-item>
+          <ion-icon name="star" item-left></ion-icon>
+          Favourites
+        </ion-item>
+      </ion-list>
+    </sidemenu>
+  </ion-content>
+
+
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

@@ -1,0 +1,101 @@
+page-profile {
+  .carousel-feed {
+    background: #F7F8FC;
+  }
+
+
+  .profile-options {
+    position: relative;
+    padding: 0 20px;
+    margin-top: -30px;
+    z-index: 100;
+    h3,h4,h5,h6 {
+      margin: 5px 0;
+    }
+    h1, h2 {
+      margin-top: 15px;
+      margin-bottom: 5px;
+    }
+    h6 {
+      font-size: 85%;
+      text-transform: capitalize;
+      @include Opacity(0.5);
+    }
+    ion-col {
+      text-align: center;
+    }
+    ion-icon {
+      padding-right: 0;
+    }
+  }
+
+
+  .profile-banner {
+      position: relative;
+      .location {
+        margin: 5px 0;
+      }
+    .profile-image {
+      border-radius: 500px;
+      max-width: 9rem;
+      max-height: 9rem;
+      margin-bottom: 20px;
+    }
+    &::before {
+      position: absolute;
+      width: 100%;
+      height: 100%; min-height: 100%;
+      background: transparentize(#000, 0.7);
+      content: '';
+      z-index: 1;
+    }
+    img.slide-image {
+      position: relative;
+      display: block;
+      width: 100%;
+    }
+    .details {
+      position: absolute;
+      bottom: 0;
+      padding: 32px;
+      text-align: left;
+      z-index: 2;
+      width: 100%;
+      * {
+        color : white;
+      }
+      .detail-title {
+        @include breakpoint($iphone6){
+          font-size: 180% !important;
+        }
+      }
+    }
+  }
+
+  ion-grid.profile-stats,
+  ion-grid.profile-stats ion-row,
+  ion-grid.profile-stats ion-row ion-col {
+    padding: 0;
+    button {
+      padding-left: 3px;
+      padding-right: 3px;
+      @include Opacity(0.7);
+      span.stat-count {
+        @extend .secondary-font;
+        color : color($colors, primary);
+      }
+      &.button-ios, &.button-md {
+        height: 1.8em;
+      }
+    }
+  }
+
+  ion-list.profile-list {
+    ion-label {
+      white-space: normal;
+      p:first-of-type {
+        padding-top: 0 !important;
+      }
+    }
+  }
+}

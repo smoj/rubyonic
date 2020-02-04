@@ -1,0 +1,178 @@
+<!--
+  Generated template for the Content page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="app-header" [ngClass]="{'transparent' : !solidHeader}">
+  <ion-navbar>
+    <ion-buttons left>
+      <button ion-button menuToggle>
+         <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Content</ion-title>
+    <ion-buttons right>
+      <button ion-button>
+         <ion-icon name="heart"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="fullscreen">
+  <div class="content-banner">
+    <img class="slide-image" src="assets/other-500x500-2.jpg" alt="">
+    <div class="details">
+      <h1 class="secondary-font detail-title">Sweet Dreams this Halloween</h1>
+      <h5 class="primary-font">
+        <img class="detail-thumb" src="http://placehold.it/50x50/ff0000" alt="">
+        BBC News.
+        <span class="tag">
+          <ion-icon name="pricetag"></ion-icon> Food
+        </span>
+      </h5>
+    </div>
+  </div>
+
+  <div padding class="content-section">
+    <p>
+      dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+      non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum.
+    </p>
+    <img src="assets/other-300x200-1.jpg" class="rnd-sqr-img">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna
+      aliqua. Ut enim ad minim veniam, quis nostrud exercitatio
+      ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+      aute irure dolor in reprehenderit in voluptate velit esse cillum
+    </p>
+  </div>
+
+  <h2 class="secondary-font">Related</h2>
+
+  <ion-slides class="carousel-feed" #slider id="slider" [pager] ="false" [initialSlide]="3" padding>
+    <ion-slide class="feed-slide">
+      <img class="rnd-sqr-img slide-image" src="assets/other-500x500-1.jpg" alt="">
+      <div class="details">
+        <h6 class="detail-title">Sweet Dreams this Halloween</h6>
+      </div>
+    </ion-slide>
+    <ion-slide class="feed-slide">
+      <img class="rnd-sqr-img slide-image" src="assets/other-500x500-2.jpg" alt="">
+      <div class="details">
+        <h6 class="detail-title">Sweet Dreams this Halloween</h6>
+      </div>
+    </ion-slide>
+    <ion-slide class="feed-slide">
+      <img class="rnd-sqr-img slide-image" src="assets/other-500x500-3.jpg" alt="">
+      <div class="details">
+        <h6 class="detail-title">Sweet Dreams this Halloween</h6>
+      </div>
+    </ion-slide>
+    <ion-slide class="feed-slide">
+      <img class="rnd-sqr-img slide-image" src="assets/other-500x500-4.jpg" alt="">
+      <div class="details">
+        <h6 class="detail-title">Sweet Dreams this Halloween</h6>
+      </div>
+    </ion-slide>
+    <ion-slide class="feed-slide">
+      <img class="rnd-sqr-img slide-image" src="assets/other-500x500-6.jpg" alt="">
+      <div class="details">
+        <h6 class="detail-title">Sweet Dreams this Halloween</h6>
+      </div>
+    </ion-slide>
+    <ion-slide class="feed-slide">
+      <img class="rnd-sqr-img slide-image" src="assets/other-500x500-1.jpg" alt="">
+      <div class="details">
+        <h6 class="detail-title">Sweet Dreams this Halloween</h6>
+      </div>
+    </ion-slide>
+    <ion-slide class="feed-slide">
+      <img class="rnd-sqr-img slide-image" src="assets/other-500x500-2.jpg" alt="">
+      <div class="details">
+        <h6 class="detail-title">Sweet Dreams this Halloween</h6>
+      </div>
+    </ion-slide>
+    <ion-slide class="feed-slide">
+      <img class="rnd-sqr-img slide-image" src="assets/other-500x500-3.jpg" alt="">
+      <div class="details">
+        <h6 class="detail-title">Sweet Dreams this Halloween</h6>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+  <h2 class="secondary-font">Comments</h2>
+
+  <ion-list no-lines class="comments-list">
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/user-200x200-1.jpg">
+      </ion-avatar>
+      <h2 class="secondary-font">Evan Sweanteson</h2>
+      <h6 no-margin>3hrs ago</h6>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco laboris nisi ut aliquip ex ea
+      </p>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/user-200x200-1.jpg">
+      </ion-avatar>
+      <h2 class="secondary-font">Evan Sweanteson</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco laboris nisi ut aliquip ex ea
+      </p>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/user-200x200-1.jpg">
+      </ion-avatar>
+      <h2 class="secondary-font">Evan Sweanteson</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco laboris nisi ut aliquip ex ea
+      </p>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/user-200x200-1.jpg">
+      </ion-avatar>
+      <h2 class="secondary-font">Evan Sweanteson</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco laboris nisi ut aliquip ex ea
+      </p>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-9>
+        <div class="app-search" padding>
+          <ion-icon name="search"></ion-icon>
+          <ion-input type="text"></ion-input>
+        </div>
+      </ion-col>
+      <ion-col col-3>
+        <button ion-button round>
+          <ion-icon name="chatboxes"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

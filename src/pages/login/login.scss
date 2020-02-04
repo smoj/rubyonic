@@ -1,0 +1,35 @@
+  page-login {
+    // .scroll-content {
+    //   background: url('../assets/login-bg-dark.jpg') no-repeat center center/cover;
+    // }
+  .logo {
+    max-width: 150px;
+  }
+  .app-form {
+    margin: 20px 45px;
+    @include breakpoint($iphone6){
+      margin: 70px 30px;
+    }
+    ion-list {
+      margin-bottom: 0;
+    }
+  }
+  .box {
+    background: #f7f8fa;
+    border-radius: 10px;
+    border: 1px solid #eeeeee;
+    margin-top: 16px;
+    padding: 16px;
+    margin: 40px 0;
+    @include breakpoint($iphone5s){
+      margin: 16px 0;
+    }
+    @include breakpoint($iphone6){
+      margin: 70px 30px;
+    }
+    p {
+      color : #95a0a6;
+      font-size: 1.2rem;
+    }
+  }
+}

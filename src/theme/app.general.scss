@@ -1,0 +1,380 @@
+/*
+    App wide styling for generic components/elements
+*/
+
+.bold {font-weight: bold !important;}
+
+.pull-right {
+  float: right;
+}
+button ion-icon {
+  padding-right: 5px;
+}
+ion-content {
+  @extend .primary-font;
+  &.content-ios, &.content-md {
+    background: #fff;
+  }
+  &.fullscreen {
+    .scroll-content, .fixed-content {
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+    }
+  }
+}
+
+ion-slides {
+  height: auto;
+}
+
+.ion-segment {
+  ion-segment-button {
+    color: black !important;
+    &.segment-activated {
+      // border-bottom:
+      background: none !important;
+      &::before {
+        position: absolute;
+        bottom: 0;
+        content: '';
+        width: 100%;
+        height: 4px;
+        left: 0;
+        background: color($colors, primary);
+      }
+    }
+  }
+  &.segment-ios {
+    ion-segment-button {
+      border: none;
+      @extend .secondary-font;
+      padding: 16px;
+      font-size: 160%;
+      height: auto;
+    }
+  }
+  &.segment-md {
+    ion-segment-button {
+      text-transform: capitalize;
+      @extend .secondary-font;
+      padding: 16px;
+      font-size: 160%;
+      height: auto;
+    }
+  }
+}
+
+.select-option {
+  // color : transparentize(color($colors, dark), 0.4);
+  // border-color: transparentize(color($colors, dark), 0.6);
+  border-radius: 500px !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-width: 35px;
+}
+
+// Pricing extension style for Ion-Grid
+.app-pricing {
+  .price {
+    // background: #d8f0fc;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    &.active {
+      background: #0091ea;
+      color: white;
+      border: none;
+      .small-margin.timeframe {
+        color: transparentize(white, 0.5);
+      }
+    }
+    .small-margin {
+      margin: 4px 0;
+      &.timeframe {
+        font-size: 1.2rem !important;
+        color: transparentize(black, 0.5);
+      }
+    }
+  }
+}
+
+// Steps for Shopping checkout progress
+.app-steps {
+  position: relative;
+  padding-top: 16px;
+  &::before {
+    position: absolute;
+    content: '';
+    top: 65%;
+    left: 15%;
+    right: 15%;
+    border: 1px solid #bdc3c7;
+    height: 1;
+    width: 70%;
+    z-index: -2;
+  }
+  h6 {
+    font-size: 80%;
+    @include breakpoint($iphone6){
+      font-size: 100%;
+    }
+  }
+  .circle-step {
+    min-width: 40px;
+    min-height: 40px;
+    @include breakpoint($iphone6){
+      min-width: 50px;
+      min-height: 50px;
+    }
+    border-radius: 500px;
+    text-align: center;
+    margin: 15px 0 5px 0;
+    position: relative;
+    ion-icon {
+        margin-left: 4px;
+        color: white;
+        font-size: 1.5em;
+        @include breakpoint($iphone6){
+          font-size: 2em;
+        }
+    }
+    &::before {
+      position: absolute;
+      width: calc(100% + 10px);
+      height: calc(100% + 10px);
+      border: 3px solid #bdc3c7;
+      content: '';
+      border-radius: 500px;
+      top: -8px;
+      left: -8px;
+      background: white;
+      z-index: -1;
+    }
+    &.active {
+      background: color($colors, primary);
+      &::before {
+        border: 3px solid color($colors, primary);
+      }
+    }
+    &.done {
+      background: transparentize(color($colors, primary), 0.7);
+      &::before {
+        border: 3px solid transparentize(color($colors, primary), 0.7);
+      }
+    }
+  }
+}
+
+.app-item-grid--two-per-row {
+  padding: 0;
+  .item-product {
+    padding: 30px;
+  }
+  ion-row ion-col {
+    &:nth-child(odd) {
+      border-bottom: 1px solid #ccc;
+      border-right: 1px solid #ccc;
+    }
+    &:nth-child(even) {
+      border-bottom: 1px solid #ccc;
+      // border-left: 1px solid #ccc;
+    }
+  }
+}
+
+ion-grid.ion-table {
+  padding: 0;
+  margin: 16px 0;
+  ion-row {
+    &:last-of-type {
+      border-bottom: 1px solid transparentize(color($colors, dark), 0.85);
+    }
+    ion-col {
+      padding: 16px;
+      &:first-of-type {
+        border-right: 1px solid transparentize(color($colors, dark), 0.85);
+      }
+    }
+    &:nth-child(odd) {
+      background: #F7F8FA;
+    }
+    &:nth-child(even) {
+      background: #fff;
+    }
+  }
+}
+
+.app-header {
+  &.solid {
+    .toolbar .toolbar-background {
+      border-bottom: none;
+      background: white;
+    }
+  }
+  &.transparent {
+    ion-icon, ion-buttons > button > span ion-icon,
+    ion-title .toolbar-title,
+    button.back-button, button.back-button ion-icon {
+      color: white !important;
+    }
+    .toolbar .toolbar-background {
+      // border-bottom: 1px solid transparentize(white, 0.6);
+      background: transparentize(color($colors, dark), 0.7);
+    }
+  }
+  &.with-bottom-border {
+    .toolbar .toolbar-background {
+      border-bottom: 1px solid transparentize(#ccc, 0.7);
+    }
+  }
+
+  ion-buttons > button {
+    ion-icon {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+  }
+  @extend .primary-font;
+  &::after {
+    background-image: none;
+  }
+  ion-icon {
+    font-size: 1.8em;
+    color : transparentize(color($colors, dark), 0.3);
+  }
+  .toolbar {
+    padding:16px;
+  }
+  .toolbar .toolbar-background {
+    border-bottom: none;
+    background: none;
+  }
+}
+
+.app-form {
+  @extend .primary-font;
+  &.app-form-white {
+    .list-ios {
+      ion-item {
+        ion-input {
+          input.text-input {
+            &::placeholder {
+              color : transparentize(white, 0.4);
+            }
+          }
+          &.input-ios, .input-cover {
+            background: transparent; //ize(white, 0.5);
+            color: #fff;
+            border: 1px solid transparentize(white, 0.4);
+          }
+        }
+      }
+    }
+  }
+  .list-ios {
+    ion-item {
+      margin-bottom: 15px;
+      background: transparent;
+      ion-label {
+        margin-left: 16px;
+      }
+      &.item-select {
+        .input-wrapper {
+          background: #f7f8fa;
+          border-radius: 50px;
+          border: 1px solid #e6e6e6;
+        }
+      }
+      ion-input {
+        &.input-ios, .input-cover {
+          background: #f7f8fa;
+          color: #192325;
+          border-radius: 50px;
+          border: 1px solid #e6e6e6;
+          padding-left: 20px;
+        }
+      }
+      ion-label {
+        // color: white;
+      }
+    }
+    .item-block {
+      &:last-child, &:first-child, .item-inner {
+        border-bottom: none;
+        border-top: none;
+      }
+    }
+  }
+  .list-md {
+    ion-item {
+      background: none;
+      ion-label {
+        margin-left: 7px;
+      }
+    }
+    .item-input:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.rnd-sqr-img {
+  border-radius: 9px;
+  width: 100%;
+}
+
+@mixin Opacity($value){
+  $IEValue: $value*100;
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+  filter: alpha(opacity=$IEValue);
+}
+
+ion-content .scroll-content > h1,
+ion-content .scroll-content > h2,
+ion-content .scroll-content > h3 {
+  padding: 0 16px;
+}
+
+.feed-slide {
+  &::before {
+    position: absolute;
+    width: 100%;
+    height: 100%; min-height: 100%;
+    background: transparentize(#000, 0.7);
+    content: '';
+    z-index: 1;
+  }
+  img.slide-image {
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+  .details {
+    position: absolute;
+    bottom: 0;
+    padding: 16px;
+    text-align: left;
+    z-index: 2;
+    * {
+      color : white;
+    }
+    .detail-title {
+      @include breakpoint($iphone6){
+        font-size: 180% !important;
+      }
+    }
+  }
+}
+
+// Padding (Old habit from ionic v1)
+.padding {padding:10px;}
+.padding-horizontal {padding-left: 10px; padding-right: 10px;}
+.padding-vertical {padding-top: 10px; padding-bottom: 10px;}
+
+.padding-double {padding: 20px;}
+.padding-double-horizontal {padding-left: 20px; padding-right: 20px;}
+.padding-double-vertical {padding-top: 20px; padding-bottom: 20px;}
+
+.block {display: block;}
+.full-width {width: 100%;}
